@@ -1,0 +1,156 @@
+* {
+  font-size: 16px;
+  font-family: "Bellefair", serif;
+  color: white;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+navbar {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5rem;
+  padding: 30px 0 0px 15%;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  height: 7rem;
+  width: 70rem;
+  background-color: rgba(128, 128, 128, 0.15);
+  backdrop-filter: blur(10px);
+  overflow-x: hidden;
+}
+
+.boldnums {
+  font-weight: bolder;
+  color: white;
+  font-size: 24px;
+}
+
+.navlinks {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-left: 10%;
+}
+
+.navlinks li {
+  min-width: max-content;
+  margin-right: 5rem;
+  font-size: 20px;
+}
+
+.navlinks li a {
+  text-decoration: none;
+}
+
+.navlinks li a:hover {
+  text-decoration: underline solid gray 4px;
+  text-underline-offset: 2.75rem;
+}
+
+.navlinks li a.active,
+.navlinks li a.active:hover {
+  text-decoration: underline solid white 4px;
+  text-underline-offset: 2.75rem;
+}
+
+.logo {
+  margin-right: auto;
+}
+
+.burger-open {
+  visibility: hidden;
+  padding-right: 15%;
+}
+
+.burger-close {
+  visibility: hidden;
+  padding-right: 15%;
+}
+
+.burger-open:hover,
+.burger-close:hover {
+  cursor: pointer;
+}
+
+.clicked {
+  pointer-events: none;
+}
+
+@media (max-width: 1300px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .burger-open,
+  .burger-close {
+    visibility: visible;
+    position: relative;
+    top: 50;
+    right: 15%;
+  }
+
+  .burger-close {
+    visibility: visible;
+    align-items: flex-end;
+    right: 5%;
+  }
+
+  nav {
+    display: flex;
+    position: absolute;
+    transform: translateX(100%);
+    transition: transform 1s ease;
+  }
+
+  navbar {
+    justify-content: space-between;
+    width: inherit;
+    margin-bottom: 0;
+  }
+
+  .burger-active {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 15%;
+  }
+
+  .burger-active li {
+    margin-bottom: 50px;
+    margin-top: 15%;
+  }
+
+  .burger-active-nav {
+    display: flex;
+    transform: translateX(0);
+    transition: transform 1s ease;
+  }
+
+  .nav-OG {
+    display: none;
+    height: 100vh;
+    width: 60vw;
+    right: 0;
+    margin-top: 500px;
+    background-color: rgba(255, 255, 255, 0.1);
+    overflow-x: hidden;
+  }
+
+  .navlinks li a:hover {
+    text-decoration: underline solid gray 4px;
+    text-underline-offset: 0.75rem;
+  }
+
+  .navlinks li a.active,
+  .navlinks li a.active:hover {
+    text-decoration: underline solid white 4px;
+    text-underline-offset: 0.75rem;
+  }
+}
