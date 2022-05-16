@@ -20,7 +20,9 @@ function classtoggle(Array, classname, clickedItem) {
 5.an index which is used inside the callback for pulling data from the JSON
 2.3.4. for running the classtoggle function on the navs of each page
 */
-export function mainFunc(callBack, navArray, activeClass, arrayItem, index) {
+function mainFunc(callBack, navArray, activeClass, arrayItem, index) {
   callBack(index, fetched)
   classtoggle(navArray, activeClass, arrayItem)
 }
+
+export { mainFunc }
