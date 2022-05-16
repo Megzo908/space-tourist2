@@ -7,15 +7,16 @@ const nav_toggle = document.querySelector("nav")
 const nav_OG = document.querySelector(".nav-OG")
 
 ///////////////////////////////////////////////////////////////////////////
+/*Collapses the nav when clicked outside of it*/
 window.addEventListener("click", () => {
   if (!nav_toggle.classList.contains("burger-active-nav")) return
   collapseNav()
 })
-
+/*add the active class on the "Home" Nav link by default when the page loads*/
 if (`${activepage}` === "https://megzo908.github.io/space-tourist2/") {
   navlinks[0].classList.add("active")
 }
-
+/*Adds the active class for the specific main nav link depending on the current page*/
 navlinks.forEach(i => {
   if (i.href === `${activepage}`) {
     i.classList.add("active")
@@ -32,6 +33,7 @@ nav_toggle.addEventListener("click", e => e.stopPropagation())
 
 explorebtn.addEventListener("click", () => (location.href = "destination.html"))
 ///////////////////////////////////////////////////////////////////////////////
+
 function collapseNav() {
   nav_toggle.classList.remove("burger-active-nav")
 

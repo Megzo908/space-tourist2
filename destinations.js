@@ -17,6 +17,8 @@ planets_array.forEach(function (planet, i) {
   )
 })
 ////////////////////////////////////////////////////////////////////////////////////////////////
+/*Pulling data from the JSON file based on the index of the clicked link
+which corrsponds to the index of the relavent data inside the JSON  */
 function planetnavOn(num, jsondata) {
   moon_title.textContent = jsondata.destinations[num].name.toUpperCase()
   moon_desc.textContent = jsondata.destinations[num].description
