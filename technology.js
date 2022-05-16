@@ -6,16 +6,15 @@ const tech_desc = document.querySelector(".tech-desc")
 const tech_img = document.querySelector(".tech-img")
 
 ///////////////////////////////////////////////////////////////
-mainFunc(technavOn, tech_btns, "active", tech_btns[0], 0)
-
 tech_btns.forEach(function (btn, i) {
+  mainFunc(technavOn, tech_btns, "active", tech_btns[0], 0)
+
   btn.addEventListener("click", () =>
     mainFunc(technavOn, tech_btns, "active", btn, i)
   )
 })
 
 /////////////////////////////////////////////////////////////////////////
-
 function technavOn(num, jsondata) {
   tech_name.textContent = jsondata.technology[num].name.toUpperCase()
   tech_desc.textContent = jsondata.technology[num].description
