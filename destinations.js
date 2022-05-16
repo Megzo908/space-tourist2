@@ -4,20 +4,18 @@ const moon_title = document.querySelector(".moon-title")
 const moon_desc = document.querySelector(".moon-description")
 const bot_text1 = document.querySelector(".bot-text1")
 const bot_text2 = document.querySelector(".bot-text2")
-
 const planet_img = document.querySelector(".planet-img")
 
 const planets_array = Array.from(document.querySelectorAll(".moon-nav li"))
 
 //////////////////////////////////////////////////////////////////////////////////
-mainFunc(planetnavOn, planets_array, "active", planets_array[0], 0)
-
 planets_array.forEach(function (planet, i) {
+  mainFunc(planetnavOn, planets_array, "active", planets_array[0], 0)
+
   planet.addEventListener("click", () =>
     mainFunc(planetnavOn, planets_array, "active", planet, i)
   )
 })
-
 ////////////////////////////////////////////////////////////////////////////////////////////////
 function planetnavOn(num, jsondata) {
   moon_title.textContent = jsondata.destinations[num].name.toUpperCase()
