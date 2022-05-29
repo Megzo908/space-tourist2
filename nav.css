@@ -82,7 +82,7 @@ nav {
   pointer-events: none;
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1330px) {
   body {
     overflow-x: hidden;
   }
@@ -136,7 +136,7 @@ nav {
   .nav-OG {
     display: none;
     height: 100vh;
-    width: 60vw;
+    width: 30vw;
     right: 0;
     margin-top: 500px;
     background-color: rgba(255, 255, 255, 0.1);
@@ -152,5 +152,11 @@ nav {
   .navlinks li a.active:hover {
     text-decoration: underline solid white 4px;
     text-underline-offset: 0.75rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .nav-OG {
+    width: 50vw;
   }
 }
