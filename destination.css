@@ -16,6 +16,18 @@ body {
   letter-spacing: 4.75px;
 }
 
+.planet-img {
+  animation: rotation 20s infinite linear;
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
 .pick-num {
   color: #4e5158;
   font-weight: bold;
