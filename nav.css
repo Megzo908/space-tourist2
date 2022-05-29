@@ -7,6 +7,9 @@
 body {
   overflow-x: hidden;
 }
+.nav-OG {
+  z-index: 1;
+}
 
 navbar {
   display: flex;
