@@ -134,14 +134,13 @@ hr {
   body {
     background: url("./images/background-destination-tablet.jpg") no-repeat;
     background-size: cover;
-    overflow-x: hidden;
   }
+
   html,
   body {
     padding: 0;
     height: 100vh;
     width: 100vw;
-    overflow-x: hidden;
   }
 
   .pick-destination {
@@ -246,12 +245,6 @@ hr {
     position: absolute;
     left: 0;
     right: 0;
-    overflow-x: hidden;
-  }
-
-  body,
-  html {
-    overflow-x: hidden;
   }
 
   html {
